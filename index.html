@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charan Paduka — Handcrafted Indian Footwear</title>
+  <meta name="description" content="Charan Paduka is a local Indian shoe store offering handcrafted juttis, mojaris and leather footwear made by skilled artisans." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">च</span>
+        <span>
+          <div class="brand-name">Charan Paduka</div>
+          <div class="brand-sub">Handcrafted footwear</div>
+        </span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="order.html">Shop</a>
+        <a href="order.html#cart" class="cart-link">Cart <span class="cart-badge zero">0</span></a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Since 1962 · Jaipur</p>
+          <h1>Footwear, woven with <em>heritage</em>.</h1>
+          <p class="muted" style="font-size:1.1rem;max-width:28rem;">
+            Handmade juttis and mojaris from a small family workshop. Simple, soulful, and made to last a lifetime of journeys.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="order.html">Shop the collection</a>
+            <a class="btn outline" href="about.html">Our story</a>
+          </div>
+        </div>
+        <div class="hero-image-wrap">
+          <img src="assets/hero-shoes.jpg" alt="Handcrafted Indian leather juttis in warm earthy tones" width="1536" height="1024" />
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="divider">Our Collection</div>
+        <div class="products">
+          <article class="product">
+            <div class="product-img">C</div>
+            <h3>Classic Jutti</h3>
+            <p class="note">Hand-stitched leather</p>
+            <p class="price">₹1,200</p>
+          </article>
+          <article class="product">
+            <div class="product-img">E</div>
+            <h3>Embroidered Mojari</h3>
+            <p class="note">Zardozi thread work</p>
+            <p class="price">₹1,800</p>
+          </article>
+          <article class="product">
+            <div class="product-img">K</div>
+            <h3>Kolhapuri Chappal</h3>
+            <p class="note">Traditional buffalo hide</p>
+            <p class="price">₹950</p>
+          </article>
+        </div>
+        <p style="text-align:center;margin-top:40px;">
+          <a href="order.html" style="color:var(--primary);">Shop the full collection →</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="banner">
+      <div class="container">
+        <h2>Made by hand, made with care.</h2>
+        <p class="muted">Every pair passes through the hands of three generations of craftsmen — cut, stitched and finished in our workshop on Bazaar Lane.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-block">Charan Paduka</div>
+          <p>A small family-run shoe store, stitching tradition into every step.</p>
+        </div>
+        <div>
+          <h4>Visit</h4>
+          <p>14, Bazaar Lane<br/>Jaipur, Rajasthan</p>
+          <p>Open Mon–Sat · 10am – 8pm</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p><a href="mailto:hputttar@gmail.com">hputttar@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="copyright">© <span id="yr"></span> Charan Paduka. All rights reserved.</div>
+    </div>
+  </footer>
+
+
+  <div id="root" style="display:none"></div>
+  <script type="module" src="src/main.tsx"></script>
+  <script src="script.js"></script>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+

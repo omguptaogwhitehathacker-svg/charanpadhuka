@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop — Charan Paduka</title>
+  <meta name="description" content="Shop handcrafted juttis, mojaris and Kolhapuri chappals. Add to cart and order via email." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">च</span>
+        <span>
+          <div class="brand-name">Charan Paduka</div>
+          <div class="brand-sub">Handcrafted footwear</div>
+        </span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="order.html">Shop</a>
+        <a href="contact.html">Contact</a>
+        <a href="order.html#cart" class="cart-link">Cart <span class="cart-badge zero">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="shop-wrap">
+      <div class="container">
+        <div class="shop-head">
+          <div>
+            <p class="eyebrow">Shop</p>
+            <h1>The Charan Paduka Store</h1>
+          </div>
+          <form class="search-bar" onsubmit="return onSearch(event)">
+            <input id="shop-search" type="search" placeholder="Search juttis, mojaris, sandals..." />
+            <button type="submit">Search</button>
+          </form>
+        </div>
+
+        <div class="shop-layout">
+          <!-- Filters -->
+          <aside class="filters">
+            <h4>Categories</h4>
+            <ul>
+              <li class="active" onclick="setCategory('All', this)">All footwear</li>
+              <li onclick="setCategory('Men', this)">Men</li>
+              <li onclick="setCategory('Women', this)">Women</li>
+              <li onclick="setCategory('Kids', this)">Kids</li>
+              <li onclick="setCategory('Wedding', this)">Wedding</li>
+            </ul>
+            <h4>Why us</h4>
+            <ul style="cursor:default;">
+              <li style="cursor:default;">✓ Hand-stitched</li>
+              <li style="cursor:default;">✓ Free shipping over ₹2,000</li>
+              <li style="cursor:default;">✓ Easy 7-day returns</li>
+            </ul>
+          </aside>
+
+          <!-- Products -->
+          <div id="product-grid" class="product-grid"></div>
+
+          <!-- Cart -->
+          <aside class="cart-panel" id="cart">
+            <h3>Your Cart (<span class="cart-badge" style="position:static;background:var(--secondary);color:var(--fg);">0</span>)</h3>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-summary">
+              <div class="row-line"><span>Subtotal</span><span id="cart-subtotal">₹0</span></div>
+              <div class="row-line"><span>Shipping</span><span id="cart-ship">—</span></div>
+              <div class="row-line total"><span>Total</span><span id="cart-total">₹0</span></div>
+            </div>
+            <button id="checkout-btn" class="btn" onclick="openCheckout()" disabled>Proceed to checkout</button>
+            <button class="btn outline" onclick="if(confirm('Empty your cart?')) clearCart()">Clear cart</button>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Checkout modal -->
+  <div id="checkout-modal" class="modal-backdrop" onclick="if(event.target===this) closeCheckout()">
+    <div class="modal">
+      <button class="close" onclick="closeCheckout()" aria-label="Close">×</button>
+      <h2>Checkout</h2>
+      <p class="muted" style="margin-top:-8px;">Review your order, then we'll open your email app to send it to our workshop.</p>
+      <div id="checkout-summary" class="modal-summary"></div>
+      <form onsubmit="return placeOrder(event)">
+        <div class="row">
+          <div><label for="co-name">Full name</label><input id="co-name" name="name" required /></div>
+          <div><label for="co-phone">Phone</label><input id="co-phone" name="phone" required /></div>
+        </div>
+        <div><label for="co-email">Email</label><input id="co-email" name="email" type="email" required /></div>
+        <div><label for="co-address">Delivery address</label><textarea id="co-address" name="address" rows="3" required></textarea></div>
+        <div>
+          <label for="co-payment">Payment preference</label>
+          <select id="co-payment" name="payment">
+            <option>Cash on Delivery</option>
+            <option>UPI / GPay</option>
+            <option>Bank transfer</option>
+          </select>
+        </div>
+        <div><label for="co-notes">Notes (optional)</label><textarea id="co-notes" name="notes" rows="2"></textarea></div>
+        <button type="submit" class="btn">Place order via email</button>
+        <p class="form-note">Sent to <strong>hputttar@gmail.com</strong>.</p>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-block">Charan Paduka</div>
+          <p>A small family-run shoe store, stitching tradition into every step.</p>
+        </div>
+        <div>
+          <h4>Visit</h4>
+          <p>14, Bazaar Lane<br/>Jaipur, Rajasthan</p>
+          <p>Open Mon–Sat · 10am – 8pm</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p><a href="mailto:hputttar@gmail.com">hputttar@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="copyright">© <span id="yr"></span> Charan Paduka. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>

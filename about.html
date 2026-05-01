@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Charan Paduka</title>
+  <meta name="description" content="Three generations of artisans handcrafting juttis and mojaris in Jaipur since 1962." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">च</span>
+        <span>
+          <div class="brand-name">Charan Paduka</div>
+          <div class="brand-sub">Handcrafted footwear</div>
+        </span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="order.html">Shop</a>
+        <a href="order.html#cart" class="cart-link">Cart <span class="cart-badge zero">0</span></a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section style="padding-top:72px;">
+      <div class="container">
+        <p class="eyebrow">Our story</p>
+        <h1 style="max-width:36rem;">Three generations, one workshop, countless steps.</h1>
+
+        <div class="about-grid">
+          <img src="assets/artisan.jpg" alt="Indian artisan stitching a leather shoe by hand" width="1280" height="960" loading="lazy" />
+          <div>
+            <p>Charan Paduka began in 1962 in a quiet corner of Jaipur, where our grandfather set up a small bench, a few tools, and a dream of making the most comfortable footwear in the city.</p>
+            <p>Six decades on, we still work the same way — leather is cut by hand, soles are stitched with waxed cotton thread, and every pair is finished with a small motif painted by my mother.</p>
+            <p>We believe in slow craft. A pair of our juttis takes two days to make and, with care, will walk with you for many years.</p>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div>
+            <div class="stat-num">60+</div>
+            <div class="stat-label">Years of craft</div>
+          </div>
+          <div>
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Hand-stitched</div>
+          </div>
+          <div>
+            <div class="stat-num">12</div>
+            <div class="stat-label">Local artisans</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-block">Charan Paduka</div>
+          <p>A small family-run shoe store, stitching tradition into every step.</p>
+        </div>
+        <div>
+          <h4>Visit</h4>
+          <p>14, Bazaar Lane<br/>Jaipur, Rajasthan</p>
+          <p>Open Mon–Sat · 10am – 8pm</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p><a href="mailto:hputttar@gmail.com">hputttar@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="copyright">© <span id="yr"></span> Charan Paduka. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
